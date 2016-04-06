@@ -76,4 +76,5 @@ fos_user:
     user_class: Brooter\UserBundle\Entity\User
     registration:
         form:
-            type: Brooter\UserBundle\Form\RegistrationType
+            type: Brooter\UserBundle\Form\RegistrationFormType
+

@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Brooter\UserBundle\Form\Type;
+namespace Brooter\UserBundle\Form;
 
 use FOS\UserBundle\Util\LegacyFormHelper;
 use Symfony\Component\Form\AbstractType;
