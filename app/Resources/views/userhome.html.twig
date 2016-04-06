@@ -79,9 +79,32 @@
         </aside>
     {% endblock %}
     <div class="content-wrapper">
-        {% block body %}
 
-        {% endblock %}
+        <section class="content">
+            <!-- Your Page Content Here -->
+            <div class="row">
+                <div class="col-md-4 pull-right">
+                    <div class="box box-info">
+                        <div class="box-header with-border">
+                            <h3 class="box-title"><i class="fa fa-chevron-right"></i> Sign in</h3>
+                        </div>
+                        <div class="box-body">
+                            {{ render (url('fos_user_security_login')) }}
+                        </div><!-- /.box-body -->
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 pull-right">
+                    <div class="box box-info">
+                        <div class="box-header with-border">
+                            <h3 class="box-title"><i class="fa fa-chevron-right"></i> Sign up</h3>
+                        </div>
+                        {{ render (url('fos_user_registration_register')) }}
+                    </div>
+                </div>
+            </div>
+        </section><!-- /.content -->
     </div>
 </div>
 {% block footer %}
