@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% block title %}example{% endblock %}</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    {% block stylesheets %}
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="{{ asset('adminlte/bootstrap/css/bootstrap.css') }}">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+        <!-- Theme style -->
+        <link rel="stylesheet" href="{{ asset('adminlte/dist/css/AdminLTE.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('adminlte/dist/css/skins/skin-blue.min.css') }}">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <link rel="stylesheet" href="{{ asset('adminlte/css/custom.css') }}">
+    {% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+
+<div class="wrapper">
+    {% block header %}
+        <!-- Main Header -->
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="{{ path('brooter_user_homepage') }}" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class="logo-mini"><b>e</b>x</span>
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg"><b>example</b>.com</span>
+            </a>
+            <!-- Header Navbar -->
+            <nav class="navbar navbar-static-top" role="navigation">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <!-- Navbar Right Menu -->
+                <div class="navbar-custom-menu">
+                </div>
+            </nav>
+        </header>
+    {% endblock %}
+    {% block leftsidebar %}
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                <!-- Sidebar Menu -->
+                <ul class="sidebar-menu">
+                    <!-- Optionally, you can add icons to the links -->
+                    <li class="active"><a href="{{ path('brooter_user_homepage') }}"><i class="fa fa-home"></i> <span>HOME</span></a>
+                    </li>
+                    <li class="active"><a href="{{ path('brooter_forum_homepage') }}"><i
+                                    class="fa fa-pencil-square"></i> <span>FORUM</span></a>
+                    </li>
+                    <li class="active"><a href="#"><i class="fa fa-bookmark"></i> <span>COMPANY DIRECTORY</span></a>
+                    </li>
+                    <li class="active"><a href="#"><i class="fa fa-building"></i> <span>PROPERTY</span></a></li>
+                    <li class="active"><a href="#"><i class="fa fa-car"></i> <span>VEHICLE LEADS</span></a></li>
+                    <li class="active"><a href="#"><i class="fa fa-bell"></i> <span>LET ME KNOW</span></a></li>
+                </ul><!-- /.sidebar-menu -->
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+    {% endblock %}
+    <div class="content-wrapper">
+        {% block body %}
+
+        {% endblock %}
+    </div>
+</div>
+{% block footer %}
+    <!-- Main Footer -->
+    <footer class="main-footer">
+        <strong>example &copy; 2016 /</strong> All rights reserved.
+        <div class="pull-right">Languages</div>
+    </footer>{% endblock %}
+{% block javascripts %}
+    <!-- REQUIRED JS SCRIPTS -->
+    <!-- jQuery 2.1.4 -->
+    <script src="{{ asset('adminlte/plugins/jQuery/jQuery-2.1.4.min.js') }}"></script>
+    <!-- Bootstrap 3.3.5 -->
+    <script src="{{ asset('adminlte/bootstrap/js/bootstrap.min.js') }}"></script>
+    <!-- AdminLTE App -->
+    <script src="{{ asset('adminlte/dist/js/app.min.js') }}"></script>
+{% endblock %}
+</body>
+</html>
