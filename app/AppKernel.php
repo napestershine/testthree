@@ -19,6 +19,8 @@ class AppKernel extends Kernel
             new Brooter\AdminBundle\BrooterAdminBundle(),
             new Brooter\UserBundle\BrooterUserBundle(),
             new Brooter\ForumBundle\BrooterForumBundle(),
+            new FOS\UserBundle\FOSUserBundle(),
+            new Liip\ImagineBundle\LiipImagineBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
