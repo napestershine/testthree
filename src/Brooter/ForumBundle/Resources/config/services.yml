@@ -1,0 +1,4 @@
+services:
+#    brooter_forum.example:
+#        class: Brooter\ForumBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]

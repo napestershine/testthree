@@ -1,0 +1,3 @@
+brooter_forum_homepage:
+    path:     /
+    defaults: { _controller: BrooterForumBundle:Default:index }
