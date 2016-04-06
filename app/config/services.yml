@@ -5,7 +5,7 @@ parameters:
 
 services:
     brooter.form.registration:
-        class: Brooter\UserBundle\Form\Type\RegistrationFormType
+        class: Brooter\UserBundle\Form\RegistrationType
         argument:
             - %fos_user.model.user.class%
         tags:
