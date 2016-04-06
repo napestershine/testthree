@@ -74,6 +74,6 @@ class RegistrationType extends BaseType
 
     public function getBlockPrefix()
     {
-        return 'fos_user_registration';
+        return 'brooter_user_registration';
     }
 }
