@@ -32,19 +32,22 @@ class RegistrationFormType extends BaseType
 
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-
-        parent::buildForm($builder, $options);
         $builder
-            ->add('email', LegacyFormHelper::getType('Symfony\Component\Form\Extension\Core\Type\EmailType'), array('label' => 'form.email', 'translation_domain' => 'FOSUserBundle'))
+            ->add('email', LegacyFormHelper::getType('Symfony\Component\Form\Extension\Core\Type\EmailType'),
+                array(
+                    'label' => 'form.email',
+                    'translation_domain' => 'FOSUserBundle',
+                    'attr' => array('class' => 'form-control')
+                ))
             ->add('username', null, array('label' => 'form.username', 'translation_domain' => 'FOSUserBundle'))
-            ->add('plainPassword', LegacyFormHelper::getType('Symfony\Component\Form\Extension\Core\Type\RepeatedType'), array(
-                'type' => LegacyFormHelper::getType('Symfony\Component\Form\Extension\Core\Type\PasswordType'),
-                'options' => array('translation_domain' => 'FOSUserBundle'),
-                'first_options' => array('label' => 'form.password'),
-                'second_options' => array('label' => 'form.password_confirmation'),
-                'invalid_message' => 'fos_user.password.mismatch',
-            ))
-        ;
+            ->add('plainPassword', LegacyFormHelper::getType('Symfony\Component\Form\Extension\Core\Type\RepeatedType'),
+                array(
+                    'type' => LegacyFormHelper::getType('Symfony\Component\Form\Extension\Core\Type\PasswordType'),
+                    'options' => array('translation_domain' => 'FOSUserBundle'),
+                    'first_options' => array('label' => 'form.password'),
+                    'second_options' => array('label' => 'form.password_confirmation'),
+                    'invalid_message' => 'fos_user.password.mismatch',
+                ));
     }
 
     public function configureOptions(OptionsResolver $resolver)
@@ -53,7 +56,7 @@ class RegistrationFormType extends BaseType
             'data_class' => $this->class,
             'csrf_token_id' => 'registration',
             // BC for SF < 2.8
-            'intention'  => 'registration',
+            'intention' => 'registration',
         ));
     }
 
