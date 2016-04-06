@@ -14,4 +14,9 @@
 !var/SymfonyRequirements.php
 /vendor/
 /web/bundles/
+/web/adminlte/plugins/
+/web/adminlte/bootstrap/
+/web/adminlte/dist/
+/web/adminlte/images/
+/web/adminlte/build/
 /.idea/
